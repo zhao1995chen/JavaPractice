@@ -15,8 +15,35 @@
     <input type="submit" value="送出查詢">
     <!-- <input type="submit" value="送出查詢" onclick="return send()"> -->
   </form>
+
+  <div id="guess">
+    <p>數字 1 ~ 100：<input type="text" id="guessNumber" value="50"></p>
+    <button onclick="guess()">Guess</button>
+  </div>
 </body>
 <script type="text/javascript">
+  var sys = Math.floor(Math.random() * 100 + 1);
+  var maxNum = 100;
+  var minNum = 0;
+  var count = 0;
+
+  function guess() {
+    console.log(sys);
+    var guessNumber = document.getElementById("guessNumber").value;
+    count++;
+    if(guessNumber == sys) {
+      alert("Bingo! The number is " + sys + "! You used " + count + " times to guess!");
+      sys = Math.floor(Math.random() * 100 + 1);
+      count = 0;
+    } else if(guessNumber > sys) {
+      maxNum = guessNumber;
+      alert("Nono!\nBetween " + minNum + " to " + maxNum);
+    } else if(guessNumber < sys) {
+      minNum = guessNumber;
+      alert("Nono!\nBetween " + minNum + " to " + maxNum);
+    }
+  }
+
   function show() {
     var d1 = document.getElementById("div1");
     var t = new Date();
