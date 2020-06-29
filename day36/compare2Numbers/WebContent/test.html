@@ -6,11 +6,24 @@
   <title>JavaScript</title>
 </head>
 <body>
-  <form action="test.jsp">
-    <input type="submit" value="送出查詢" onclick="return send()">
+  <form action="test.jsp" onsubmit="return check()">
+    <p>Name：<input type="text" name="uname" id="uname"></p>
+    <p>Password：<input type="password" name="pass" id="pass" value="1234"></p>
+    <input type="submit" value="送出查詢">
+    <!-- <input type="submit" value="送出查詢" onclick="return send()"> -->
   </form>
 </body>
 <script type="text/javascript">
+  function check() {
+    var p = document.getElementById("pass").value;
+    if (!isNaN(p)) {
+      return true;
+    } else {
+      alert("This is not a number");
+      return false;
+    }
+  }
+
   function send() {
     var n = prompt("請輸入數字(Please insert digit.)", "7");
     if (!isNaN(n)) {
