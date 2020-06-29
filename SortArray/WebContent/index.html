@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Random Array and Show</title>
+</head>
+<body>
+  <h1>Sort Random Array and Show</h1>
+  <div id="time">
+    <p>Time</p>
+  </div>
+  <div id="arrayShow">
+    <p>Element of random array.</p>
+  </div>
+</body>
+<script type="text/javascript">
+  let nums = [];
+
+  function time() {
+    let t = document.getElementById("time");
+    let localTime = new Date();
+    t.innerHTML = "<h3>" + localTime.toLocaleTimeString() + "</h3>";
+  }
+
+  function randomNumbers() {
+    for (let i = 0; i < 10; i++) {
+      let n = Math.floor(Math.random() * 100 + 1);
+      nums.push(n);
+    }
+  }
+
+  function bubbleSort() {
+    let toArray = nums.length;
+
+    while(toArray > 1) {
+      toArray--;
+      for(let i = 0; i < toArray; i++) {
+        if(nums[i] > nums[i+1]) {
+          nums[i] = nums[i] ^ nums[i+1];
+          nums[i+1] = nums[i] ^ nums[i+1];
+          nums[i] = nums[i] ^ nums[i+1];
+        }
+      }
+    }
+  }
+
+  let count = 0;
+
+  function show() {
+    count = count == 10 ? 0 : count;
+    let arrayShow = document.getElementById("arrayShow");
+    arrayShow.innerHTML = "<h3>Length of random array is " + nums.length + ".</h3>";
+    arrayShow.innerHTML += "<h3>randomArray["+ count + "] = " + nums[count] + "</h3>";
+    count++;
+  }
+
+  function init() {
+    window.setInterval(time, 1000);
+    randomNumbers();
+    bubbleSort();
+    window.setInterval(show, 3000);
+  }
+
+  init();
+</script>
+</html>
