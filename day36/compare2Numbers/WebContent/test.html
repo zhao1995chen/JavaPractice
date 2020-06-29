@@ -20,8 +20,27 @@
     <p>數字 1 ~ 100：<input type="text" id="guessNumber" value="50"></p>
     <button onclick="guess()">Guess</button>
   </div>
+
+  <p>Value：<input type="text" id="n1" value="1"></p>
+  <button onclick="add()">Add</button>
+  <button onclick="printArray()">Show</button>
 </body>
 <script type="text/javascript">
+  var data = [];
+  function add() {
+    var n = document.getElementById("n1").value;
+    data.push(n);
+    alert(n + " insert to array");
+  }
+
+  function printArray() {
+    var str = "";
+    for (let index = 0; index < data.length; index++) {
+      str += data[index] + "\n";
+    }
+    alert(str);
+  }
+
   var sys = Math.floor(Math.random() * 100 + 1);
   var maxNum = 100;
   var minNum = 0;
