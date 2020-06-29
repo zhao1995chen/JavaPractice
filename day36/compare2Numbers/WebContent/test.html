@@ -6,6 +6,9 @@
   <title>JavaScript</title>
 </head>
 <body>
+  <div id="div1">
+    <p>Time</p>
+  </div>
   <form action="test.jsp" onsubmit="return check()">
     <p>Name：<input type="text" name="uname" id="uname"></p>
     <p>Password：<input type="password" name="pass" id="pass" value="1234"></p>
@@ -14,6 +17,12 @@
   </form>
 </body>
 <script type="text/javascript">
+  function show() {
+    var d1 = document.getElementById("div1");
+    var t = new Date();
+    d1.innerHTML = "<h3>" + t.toLocaleTimeString() + "</h3>";
+  }
+
   function check() {
     var p = document.getElementById("pass").value;
     if (!isNaN(p)) {
@@ -36,5 +45,7 @@
     // return false; // 不執行 form submit
     // return ture; // 執行 form submit => 404 Not Found
   }
+
+  window.setInterval(show, 1000);
 </script>
 </html>
