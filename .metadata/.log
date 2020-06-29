@@ -2547,3 +2547,99 @@ java.lang.NullPointerException
 	at org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$1$1.runInWorkspace(ResourceMgmtActionProvider.java:230)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.334
+!MESSAGE No line style provider for org.eclipse.wst.sse.ST_DEFAULT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.335
+!MESSAGE No line style provider for org.eclipse.wst.sse.UNKNOWN_PARTITION_TYPE
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.336
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_DEFAULT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.337
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_CDATA
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.338
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_DECL
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.338
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_COMMENT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.339
+!MESSAGE No line style provider for org.eclipse.wst.xml.dtd.internal_subset
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.340
+!MESSAGE No line style provider for org.eclipse.wst.xml.PROCESSING_INSTRUCTION:
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.340
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:02:58.341
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT.EVENTHANDLER
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.138
+!MESSAGE No line style provider for org.eclipse.wst.sse.ST_DEFAULT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.139
+!MESSAGE No line style provider for org.eclipse.wst.sse.UNKNOWN_PARTITION_TYPE
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.141
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_DEFAULT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.143
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_CDATA
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.145
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_DECL
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.146
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_COMMENT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.148
+!MESSAGE No line style provider for org.eclipse.wst.xml.dtd.internal_subset
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.149
+!MESSAGE No line style provider for org.eclipse.wst.xml.PROCESSING_INSTRUCTION:
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.151
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:05:56.154
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT.EVENTHANDLER
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2020-06-29 11:12:34.040
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2020-06-29 11:13:06.671
+!MESSAGE Port 8005 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.696
+!MESSAGE No line style provider for org.eclipse.wst.sse.ST_DEFAULT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.698
+!MESSAGE No line style provider for org.eclipse.wst.sse.UNKNOWN_PARTITION_TYPE
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.699
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_DEFAULT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.701
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_CDATA
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.703
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_DECL
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.704
+!MESSAGE No line style provider for org.eclipse.wst.xml.XML_COMMENT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.706
+!MESSAGE No line style provider for org.eclipse.wst.xml.dtd.internal_subset
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.707
+!MESSAGE No line style provider for org.eclipse.wst.xml.PROCESSING_INSTRUCTION:
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.709
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-06-29 11:25:20.710
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT.EVENTHANDLER

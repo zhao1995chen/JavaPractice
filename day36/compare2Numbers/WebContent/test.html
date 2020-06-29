@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+</head>
+<body>
+  <form action="test.jsp">
+    <input type="submit" value="送出查詢" onclick="return send()">
+  </form>
+</body>
+<script type="text/javascript">
+  function send() {
+    var n = prompt("請輸入數字(Please insert digit.)", "7");
+    if (!isNaN(n)) {
+      return true;
+    } else {
+      alert("This is not a number");
+      return false;
+    }
+    // alert("send alert " + n);
+    // return false; // 不執行 form submit
+    // return ture; // 執行 form submit => 404 Not Found
+  }
+</script>
+</html>
