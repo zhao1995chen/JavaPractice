@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parse</title>
+</head>
+<body>
+  <button onclick="parse()">解讀</button>
+  <div id="div1">
+    <p>
+      Data Here
+    </p>
+  </div>
+</body>
+<script type="text/javascript">
+  function parse() {
+    let s ='{"id": "s001", "name": "Mary", "age": "20"}';
+    let data = JSON.parse(s);
+    let div1 = document.getElementById("div1");
+    div1.innerHTML = "<h3>學號：" + data.id + "\t姓名：" + data.name + "\t年齡：" + data.age;
+  }
+</script>
+</html>
