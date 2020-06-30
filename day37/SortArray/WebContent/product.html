@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+</head>
+<body>
+  <p>產品：
+    <input type="text" id="name" value="Apple">
+  </p>
+  <p>價格：
+    <input type="text" id="price" value="60">
+  </p>
+  <p>產地：
+    <input type="text" id="place" value="加拿大">
+  </p>
+  <button onclick="create()">新增</button>
+</body>
+<script type="text/javascript">
+function create() {
+  let name = document.getElementById("name").value;
+  let price = document.getElementById("price").value;
+  let place = document.getElementById("place").value;
+
+  let obj = new Object();
+  obj.ProductName = name;
+  obj.Price = price;
+  obj.Place = place;
+
+  alert(JSON.stringify(obj));
+}
+</script>
+</html>
