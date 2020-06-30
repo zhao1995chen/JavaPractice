@@ -13,11 +13,20 @@
     <input type="text" id="price" value="60">
   </p>
   <p>產地：
-    <input type="text" id="place" value="加拿大">
+    <select id="place">
+      <option value="canada">加拿大</option>
+      <option value="japan">日本</option>
+      <option value="usa"">美國</option>
+      <option value="taiwan">台灣</option>
+      <option value="korea">韓國</option>
+    </select>
   </p>
   <button onclick="create()">新增</button>
+  <button onclick="show()">顯示</button>
 </body>
 <script type="text/javascript">
+var product = [];
+
 function create() {
   let name = document.getElementById("name").value;
   let price = document.getElementById("price").value;
@@ -28,7 +37,13 @@ function create() {
   obj.Price = price;
   obj.Place = place;
 
-  alert(JSON.stringify(obj));
+  product.push(obj);
+  // alert(JSON.stringify(obj));
+}
+
+function show() {
+  var s = JSON.stringify(product);
+  alert(s);
 }
 </script>
 </html>
