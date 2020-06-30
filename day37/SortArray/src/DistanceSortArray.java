@@ -13,17 +13,17 @@ public class DistanceSortArray {
 			System.out.println("Please enter x and y of pointer.");
 			double x = sc.nextDouble();
 			double y = sc.nextDouble();
-			
+
 			Pointer p = new Pointer(x, y);
 			pArray.add(p);
 		}
-		
+
 		sortPointer(pArray);
-		
+
 		for(Pointer element: pArray) {
 			System.out.println("(" + element.getX() + ", " + element.getY() + ") -> Distance from (0, 0) " + element.getDistance());
 		}
-		
+
 		sc.close();
 	}
 
@@ -40,33 +40,5 @@ public class DistanceSortArray {
 				}
 			}
 	    }
-	}
-}
-
-class Pointer {
-	private double x;
-	private double y;
-	private double distance;
-	
-	Pointer(double x, double y) {
-		this.x = x;
-		this.y = y;
-		this.calculateDistance();
-	}
-	
-	void calculateDistance() {
-		this.distance = Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
-	}
-	
-	double getX() {
-		return this.x;
-	}
-	
-	double getY() {
-		return this.y;
-	}
-	
-	double getDistance() {
-		return this.distance;
 	}
 }
