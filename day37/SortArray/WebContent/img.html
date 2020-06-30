@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Img Script</title>
+</head>
+<body>
+  <img src="img/p1.jpg" id="img1" width="80%" height="80%">
+  <!-- <button onclick="change()">Change</button> -->
+</body>
+<script type="text/javascript">
+  let imgArray = [];
+  for(let i = 0; i < 2; i++) {
+    let s = "img/p" + (i+1) + ".jpg";
+    imgArray.push(s);
+  }
+
+  var index = 1;
+
+  function change() {
+    let img1 = document.getElementById("img1");
+    img1.src = imgArray[index];
+    index++;
+    if(index >= imgArray.length) {
+      index = 0;
+    }
+  }
+
+  window.setInterval(change, 1000);
+</script>
+</html>
