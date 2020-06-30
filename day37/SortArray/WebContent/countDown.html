@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Down</title>
+</head>
+<body>
+  <div id="div1">5</div>
+  <button onclick="countDown()">倒數五秒</button>
+</body>
+<script type="text/javascript">
+  function countDown() {
+    window.setTimeout(transfer, 5000);
+    window.setInterval(show, 1000);
+  }
+
+  function transfer() {
+    location.href = "https://www.google.com.tw/";
+  }
+
+  function show() {
+    let div1 = document.getElementById("div1");
+    console.log(div1.value);
+    div1.innerHTML = parseInt(div1.innerHTML - 1);
+  }
+</script>
+</html>
