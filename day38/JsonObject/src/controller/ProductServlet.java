@@ -30,8 +30,9 @@ public class ProductServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8"); // set encoding mode
 		String data = request.getParameter("data");
-		request.setCharacterEncoding("utf-8");
+		
 		response.setContentType("text/html;charser=utf-8");
 		response.setCharacterEncoding("utf-8");
 //		response.getWriter().append(data);

@@ -1,6 +1,9 @@
 package model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
+	// attribute name needs to as same as json object setting
 	private String name;
 	private int price;
 	private String place;
