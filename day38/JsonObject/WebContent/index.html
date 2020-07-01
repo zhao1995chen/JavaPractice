@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>產品：
+    <input type="text" id="name" value="Apple">
+  </p>
+  <p>價格：
+    <input type="text" id="price" value="60">
+  </p>
+  <p>產地：
+    <select id="place" value="canada">
+      <option value="canada">加拿大</option>
+      <option value="japan">日本</option>
+      <option value="taiwan">台灣</option>
+      <option value="usa">美國</option>
+      <option value="korea">韓國</option>
+    </select>
+  </p>
+  <button onclick="create()">新增</button>
+  <button onclick="send()">送出</button>
+</body>
+<script>
+  let products = [];
+
+  function create() {
+    let name = document.getElementById("name");
+    let price = document.getElementById("price");
+    let place = document.getElementById("place");
+    let obj = new Object();
+
+    obj.productName = name.value;
+    obj.productPrice = price.value;
+    obj.productPlace = place.value;
+
+    products.push(obj);
+    show();
+  }
+
+  function show() {
+    let s = JSON.stringify(products);
+    alert(s);
+  }
+
+  function send() {
+    var s = JSON.stringify(products);
+    var url = "http://localhost:8080/JsonObject/ProductServlet?data=" + s;
+    location.href = encodeURI(url);
+  }
+</script>
+</html>
