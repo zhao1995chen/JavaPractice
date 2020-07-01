@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+
+import model.Product;
+
 /**
  * Servlet implementation class ProductServlet
  */
@@ -30,9 +34,16 @@ public class ProductServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charser=utf-8");
 		response.setCharacterEncoding("utf-8");
-		response.getWriter().append(data);
-
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append(data);
+		
+		Gson g = new Gson();
+		Product[] pts = g.fromJson(data, Product[].class);
+		String msg = "";
+		for(Product p: pts) {
+			msg += p.toString() + "<br>";
+		}
+		
+		response.getWriter().append(msg);
 	}
 
 	/**
