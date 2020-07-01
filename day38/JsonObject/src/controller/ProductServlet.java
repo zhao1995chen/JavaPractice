@@ -1,6 +1,9 @@
 package controller;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,6 +42,9 @@ public class ProductServlet extends HttpServlet {
 		
 		Gson g = new Gson();
 		Product[] pts = g.fromJson(data, Product[].class);
+		
+		save(pts);
+		
 		String msg = "";
 		for(Product p: pts) {
 			msg += p.toString() + "<br>";
@@ -55,4 +61,12 @@ public class ProductServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
+	public void save(Product[] pts) throws IOException {
+		FileOutputStream fos = new FileOutputStream("C:/Users/Zhao/Documents/JavaPractice/day38/JsonObject/output/pts.bin");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+		oos.writeObject(pts);
+		oos.close();
+		fos.close();
+	}
 }
