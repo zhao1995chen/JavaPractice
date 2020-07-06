@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class loginServlet
+ * Servlet implementation class viewServlet
  */
-@WebServlet("/login.do")
-public class loginServlet extends HttpServlet {
+@WebServlet("/user.view")
+public class viewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public loginServlet() {
+    public viewServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,13 +26,10 @@ public class loginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-
-		request.getSession().setAttribute("username", username);
-		request.getSession().setAttribute("password", password);
-//		request.getRequestDispatcher("userView.jsp").forward(request, response);
-		request.getRequestDispatcher("user.view").forward(request, response);
+		String username = request.getSession().getAttribute("username").toString();
+		String password = request.getSession().getAttribute("password").toString();
+		response.setContentType("text/html;charset=utf-8");
+		response.getWriter().append("Username: ").append(username).append("<br>Password: ").append(password);
 	}
 
 	/**
