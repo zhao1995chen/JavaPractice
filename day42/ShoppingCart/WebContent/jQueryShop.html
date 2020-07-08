@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Please enter the item to add or remove:</p>
+  <p>Add item:</p>
+  <select name="item">
+    <option>Beavis & Butt-head Video collection
+    <option>X-files movie
+    <option>Twin peaks tapes
+    <option>NIN CD
+    <option>SP Book
+    <option>Concert tickets
+    <option>Love life
+    <option>Switch blade
+    <option>Rex, Rugs & Rock n' Roll
+  </select>
+  <input type="button" onclick="add()" value="add">
+  <input type="button" onclick="remove()" value="remove">
+</body>
+<script>
+let add = () => {
+  $.post("carts.jsp",{"item":$("#item").val(),"submit":"add"}, data => {
+    $("#div1").html(data);
+  });
+};
+
+let remove = () => {
+  $.post("carts.jsp",{"item":$("#item").val(),"submit":"remove"}, data => {
+    $("#div1").html(data);
+  });
+}
+</script>
+</html>
