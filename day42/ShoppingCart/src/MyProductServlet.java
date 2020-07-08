@@ -31,9 +31,16 @@ public class MyProductServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		MyProduct product = new MyProduct("Apple", 100);
-		request.setAttribute("product", product);
-		request.getRequestDispatcher("pview.jsp").forward(request, response);
+//		MyProduct product = new MyProduct("Apple", 100);
+//		request.setAttribute("product", product);
+//		request.getRequestDispatcher("pview.jsp").forward(request, response);
+		
+		List<MyProduct> data = new ArrayList<>();
+		data.add(new MyProduct("Apple", 100));
+		data.add(new MyProduct("Grape", 300));
+		data.add(new MyProduct("Cherry", 1500));
+		request.setAttribute("products", data);
+		request.getRequestDispatcher("pviews.jsp").forward(request, response);
 	}
 
 	/**
