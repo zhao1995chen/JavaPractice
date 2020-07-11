@@ -7,7 +7,7 @@ public class Product implements Serializable {
 	private String name;
 	private int price;
 	private String place;
-	
+
 	public Product(String name, int price, String place) {
 		this.name = name;
 		this.price = price;
@@ -37,7 +37,7 @@ public class Product implements Serializable {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	
+
 	public String toString() {
 		return name + ":" + price + ":" + place;
 	}

@@ -4,16 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jQuery Demo</title>
-  <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <!-- need to place in WebContent/ -->
 </head>
 <body>
   <input type="text" id="num" value="5">
-  <button>Check</button>
+  <button id="check">Check</button>
+  <br>
+  <h3>新增產品</h3>
+  <p>廠牌名稱
+    <input type="text" id="name">
+  </p>
+  <p>手機價格
+    <input type="text" id="price">
+  </p>
+  <button onclick="create()">新增</button>
+  <button onclick="send()">送出</button>
+
+  <button id="table">Get JSP Table</button>
+  <div id="div1">Table show Here</div>
 </body>
 <script>
   $(document).ready(() => {
-    $("button").click(() => {
+    $("#table").click(getData);
+  });
+
+  let getData = () => {
+    $.get("table.jsp", data => {
+      $("#div1").html(data);
+    });
+  };
+
+  $(document).ready(() => {
+    $("#check").click(() => {
       let v = $("#num").val();
       alert(v);
     });

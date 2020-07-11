@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- need to place in WebContent/ -->
+</head>
+<body>
+<p>水果：
+    <input type="text" id="fruit" value="apple">
+    <input type="button" onclick="send()" value="send">
+</p>
+<div id="div1">Table show Here</div>
+</body>
+<script>
+    let send = () => {
+        let URLs = "fruit.jsp";
+        $.ajax({
+            url: URLs,
+            type: "post",
+            dataType: "html",
+            data: {
+                "fruit": $("#fruit").val(),
+            },
+            success: (msg) => {
+                $("#div1").html(msg);
+            }
+        })
+    }
+</script>
+</html>
