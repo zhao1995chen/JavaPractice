@@ -1,7 +1,6 @@
-<%@page import="model.Product"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +9,6 @@
 </head>
 <body>
 <jsp:useBean id="products" scope="request" class="java.util.ArrayList" />
-<% Iterator itr = null; %>
-<% itr = products.iterator(); %>
 <table border="1" width="90%">
 	<tr>
 		<th>Code</th>
@@ -19,19 +16,14 @@
 		<th>Description</th>
 		<th>Quantity</th>
 	</tr>
-	<%
-		while(itr.hasNext()) {
-			Product p = (Product)itr.next();
-	%>
+	<c:forEach var="p" items="${products}">
 	<tr>
-		<td><%= p.getCode() %></td>
-		<td><%= p.getPrice() %></td>
-		<td><%= p.getDescription() %></td>
-		<td><%= p.getQuantity() %></td>
+		<td>${p.code}</td>
+		<td>${p.price}</td>
+		<td>${p.description}</td>
+		<td>${p.quantity}</td>
 	</tr>
-	<%
-		}
-	%>
+	</c:forEach>
 </table>
 </body>
 </html>
