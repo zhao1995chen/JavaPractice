@@ -9142,3 +9142,17 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.oomph.setup.ui 1 0 2020-07-15 09:29:54.982
 !MESSAGE Setup tasks were performed during startup. See 'C:\Users\Zhao\eclipse\jee-2019-06\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.ui 4 4 2020-07-15 09:40:09.323
+!MESSAGE Unable to find element factory: org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory
+
+!ENTRY org.eclipse.ui 4 4 2020-07-15 09:40:09.325
+!MESSAGE Unable to create part
+!SUBENTRY 1 org.eclipse.ui 4 0 2020-07-15 09:40:09.325
+!MESSAGE Cannot instantiate input element factory org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory for editor id=org.jboss.tools.jst.jsp.jspeditor.HTMLTextEditor name=/DAODemo/WebContent/coffee.html
+
+!ENTRY org.eclipse.ui 4 4 2020-07-15 09:40:09.328
+!MESSAGE Unable to find element factory: org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2020-07-15 10:05:44.342
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.

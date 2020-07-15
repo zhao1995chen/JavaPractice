@@ -3,15 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert Coffee</title>
+<script  src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<form action="InsertCoffeeServlet" method="post">
+<!-- <form action="InsertCoffeeServlet" method="post">
 	<p>咖啡名稱：<input type="text" name="coffee" value="Extra Espresso"/></p>
 	<p>售價：<input type="text" name="sale" value="200"/></p>
 	<p>總量：<input type="text" name="total" value="10"/></p>
 	<p>供應商：<input type="text" name="supplier" value="150"/></p>
 	<p>價格：<input type="text" name="price" value="300"/></p>
 	<input type="submit" value="send"/>
-</form>
+</form> -->
+
+	<p>咖啡名稱：<input type="text" id="coffee" value="Extra Espresso"/></p>
+	<p>售價：<input type="text" id="sale" value="200"/></p>
+	<p>總量：<input type="text" id="total" value="10"/></p>
+	<p>供應商：<input type="text" id="supplier" value="150"/></p>
+	<p>價格：<input type="text" id="price" value="300"/></p>
+	<!-- <input type="submit" value="send"/> -->
+	<button id="insert" onclick="insert()">Insert</button>
+	<div id="result">Result</div>
 </body>
+<script type="text/javascript">
+	var insert = () => {
+		var coffee = $("#coffee").val();
+		var sale = $("#sale").val();
+		var total = $("#total").val();
+		var supplier = $("#supplier").val();
+		var price = $("#price").val();
+		
+		$.ajax({
+			type: "post",
+			dataType: "html",
+			url: "InsertCoffeeServlet",
+			data: {
+				"coffee": coffee,
+				"sale": sale,
+				"total": total,
+				"supplier": supplier,
+				"price": price
+			},
+			success: msg => {
+				$("#result").html(msg);
+			},
+			error: (xhr, ajaxOptions, throwError) => {
+				alert(xhr.status);
+				alert(throwError);
+			}
+		});
+	}
+</script>
 </html>
