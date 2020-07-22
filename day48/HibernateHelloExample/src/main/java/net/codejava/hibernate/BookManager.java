@@ -20,10 +20,6 @@ public class BookManager {
     	}
     }
  
-    protected void exit() {
-        // code to close Hibernate Session factory
-    }
- 
     protected void create() {
         Book book = new Book();
         book.setTitle("Effective Java");
@@ -88,6 +84,5 @@ public class BookManager {
     	BookManager manager = new BookManager();
         manager.setup();
         manager.create();
-        manager.exit();
     }
 }
