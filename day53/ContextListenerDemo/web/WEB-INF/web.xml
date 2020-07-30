@@ -4,8 +4,13 @@
         <param-name>welcome</param-name>
         <param-value>Jenny</param-value>
     </context-param>
+    <context-param>
+        <param-name>catalogFileName</param-name>
+        <param-value>/WEB-INF/catalog.txt</param-value>
+    </context-param>
     <listener>
-        <listener-class>MyContecxtListener</listener-class>
+        <description>ServletContextListener</description>
+        <listener-class>domain.InitializeProductList</listener-class>
     </listener>
     <session-config>
         <session-timeout>
